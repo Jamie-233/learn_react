@@ -1,4 +1,77 @@
-.App {
+.show {
+  /* css3 过渡动画 */
+  /* 所有css的切换都是1s过渡 */
+  /* opacity: 1;
+  transition: all .5s ease-in;  */
+
+  animation: show-item 2s ease-in forwards;
+}
+
+.hide {
+  /* opacity: 0;
+  transition: all .5s ease-in; */
+
+  animation: hide-item 2s ease-in forwards;
+}
+
+/* css 动画效果 通过keyframes */
+@keyframes hide-item {
+  0% {
+    opacity: 1;
+    color: red;
+  }
+  50% {
+    opacity: .5;
+    color: green;
+  }
+  100% {
+    opacity: 0;
+    color: blue;
+  }
+}
+
+@keyframes show-item {
+  0% {
+    opacity: 0;
+    color: blue;
+  }
+  50% {
+    opacity: .5;
+    color: green;
+  }
+  100% {
+    opacity: 1;
+    color: red;
+  }
+}
+
+
+.fade-enter, .fade-appear {
+  opacity: 0;
+}
+.fade-enter-active, .fade-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+/* 入场动画执行结束后 */
+.fade-enter-done {
+  opacity: 1;
+  /* color: red; */
+}
+
+/* 出厂动画 */
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+.fade-exit-done {
+  opacity: 0;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +108,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
