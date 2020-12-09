@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { CHANGE_INPUT_VALUE, ADD_ITEM, DELETE_ITEM } from './store/actionTypes';
-// 只有一个render 无状态组件
+import { CHANGE_INPUT_VALUE, ADD_ITEM, DELETE_ITEM } from '../store/actionTypes';
+// 只有一个 render 无状态组件
 const TodoList = (props) => {
   // 解构赋值
   const { inputValue, handleInputChange, handleClick, list, handleDelete } = props;
